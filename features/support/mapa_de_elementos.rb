@@ -5,4 +5,8 @@ module PageObjects
     def home
         @home ||= PaginaInicial.new
     end
+
+    def cadastro
+        @cadastro ||= PaginaCadastro.new
+    end
 end
