@@ -13,7 +13,7 @@ end
 
 E ('preencho os dados') do
     cadastro.preencher_dados_usuarios
-    sleep 5
+    sleep 10
 end
   
 E('preencho o endereco') do
