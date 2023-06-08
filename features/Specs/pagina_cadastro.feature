@@ -15,9 +15,14 @@ Funcionalidade: Cadastro - realizar um cadastro na plataforma
 
     @realizar_cadastro
     Cenario: Realizar cadastro na plataforma BugerEats
-        E preencho os dados
-        E preencho o endereco
-        E preencho o metodo de entrega
+        E preencho os dados <cenario>
+        E preencho o endereco <cenario>
+        E preencho o metodo de entrega <cenario>
         E adiciono a foto da CNH
         Quando realizo o cadastro
-        Entao valido que o cadastro foi realizado com sucesso
+        Entao valido que o cadastro foi realizado com sucesso <cenario>
+        Exemplos: 
+            | cenario     |
+            | "Moto"      |
+            | "Bicleta"   |
+            | "Van/Carro" |
