@@ -16,7 +16,6 @@ end
 E('preencho o endereco {string}') do |cenario|
     cadastro.preencher_endereco_usuarios
     expect(cadastro.campo_rua.value).to eql("Avenida Aricanduva")
-    binding.pry
 end
   
 E('preencho o metodo de entrega {string}') do |cenario|
