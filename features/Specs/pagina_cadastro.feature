@@ -14,15 +14,15 @@ Funcionalidade: Cadastro - realizar um cadastro na plataforma
         Entao valido as informacoes da tela de cadastro
 
     @realizar_cadastro
-    Cenario: Realizar cadastro na plataforma BugerEats
-        E preencho os dados <cenario>
-        E preencho o endereco <cenario>
+    Esquema do Cenario: Realizar cadastro na plataforma BugerEats
+        E preencho os dados 
+        E preencho o endereco
         E preencho o metodo de entrega <cenario>
-        E adiciono a foto da CNH
-        Quando realizo o cadastro
-        Entao valido que o cadastro foi realizado com sucesso <cenario>
+        E adiciono a foto da CNH <foto>
+        Quando realizo o cadastro 
+        Entao valido que o cadastro foi realizado com sucesso 
         Exemplos: 
-            | cenario     |
-            | "Moto"      |
-            | "Bicleta"   |
-            | "Van/Carro" |
+            | cenario     | foto      |
+            | "Moto"      | "cnh.png" |
+            | "Bicleta"   | "cnh.png" | 
+            | "Van/Carro" | "cnh.png" |

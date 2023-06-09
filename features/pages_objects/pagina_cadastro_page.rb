@@ -16,6 +16,7 @@ class PaginaCadastro < SitePrism::Page
     element :campo_moto,           'ul [alt="Moto"]'
     element :campo_bicicleta,      'ul [alt="Bicicleta"]'
     element :campo_van,            'ul [alt="Van/Carro"]'
+    element :campo_cnh,            'p [stroke="currentColor"]'
 
     def preencher_dados_usuarios
         campo_nome.send_keys('Vinicius Junior')
@@ -33,7 +34,7 @@ class PaginaCadastro < SitePrism::Page
 
     def preencher_metodo_entrega(parametro)
         if parametro.eql?("Moto")
-            campo_moto.clck
+            campo_moto.click
         elsif parametro.eql?("Bicleta")
             campo_bicicleta.click
         else

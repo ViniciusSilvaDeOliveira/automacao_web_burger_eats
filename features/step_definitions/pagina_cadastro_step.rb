@@ -9,28 +9,34 @@ Entao ('valido as informacoes da tela de cadastro') do
     expect(cadastro.foto).to be_truthy
 end
 
-E ('preencho os dados {string}') do |cenario|
+E ('preencho os dados') do
     cadastro.preencher_dados_usuarios
 end
   
-E('preencho o endereco {string}') do |cenario|
+E('preencho o endereco') do
     cadastro.preencher_endereco_usuarios
+    sleep 2
     expect(cadastro.campo_rua.value).to eql("Avenida Aricanduva")
 end
   
 E('preencho o metodo de entrega {string}') do |cenario|
     cadastro.preencher_metodo_entrega(cenario)
+    sleep 2
+end
+  
+E('adiciono a foto da CNH {string}') do |foto|
+    #fotos = foto.rows_hash
+    #binding.pry
+    img = "#{Dir.pwd}/features/support/fixtures/img/#{foto}"
+    #img = attach_file("Upload Your File", Rails.root + "/features/support/fixtures/img/cnh.png")
+    find('p [stroke="currentColor"]', visible: false).set img
     sleep 5
 end
   
-E('adiciono a foto da CNH') do
-    pending # Write code here that turns the phrase above into concrete actions
-end
-  
 Quando('realizo o cadastro') do
-    pending # Write code here that turns the phrase above into concrete actions
+    puts 'passei aqui'
 end
   
-Entao('valido que o cadastro foi realizado com sucesso {string}') do |cenario|
-    pending # Write code here that turns the phrase above into concrete actions
+Entao('valido que o cadastro foi realizado com sucesso') do
+    puts 'passei aqui'
 end
