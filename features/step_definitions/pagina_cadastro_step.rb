@@ -21,7 +21,7 @@ end
   
 E('preencho o metodo de entrega {string}') do |cenario|
     cadastro.preencher_metodo_entrega(cenario)
-    sleep 2
+    sleep 3
 end
   
 E('adiciono a foto da CNH') do |table|
