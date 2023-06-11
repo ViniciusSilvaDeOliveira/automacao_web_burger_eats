@@ -24,13 +24,10 @@ E('preencho o metodo de entrega {string}') do |cenario|
     sleep 2
 end
   
-E('adiciono a foto da CNH {string}') do |foto|
-    #fotos = foto.rows_hash
-    #binding.pry
-    img = "#{Dir.pwd}/features/support/fixtures/img/#{foto}"
-    #img = attach_file("Upload Your File", Rails.root + "/features/support/fixtures/img/cnh.png")
+E('adiciono a foto da CNH') do |table|
+    @imgs = table.rows_hash
+    img = Dir.pwd + "/features/support/fixtures/img/" + @imgs[:img]
     find('p [stroke="currentColor"]', visible: false).set img
-    sleep 5
 end
   
 Quando('realizo o cadastro') do
